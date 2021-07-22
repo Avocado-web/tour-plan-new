@@ -404,7 +404,7 @@ template {
   margin-left: 108px;
 }
 
-.navbar-buttom {
+.navbar-button {
   background-color: #0A223D;
 }
 
@@ -421,6 +421,10 @@ template {
   font-size: 14px;
   line-height: 19px;
   font-weight: bold;
+}
+
+.navbar-menu__item--mobile--visible {
+  display: none;
 }
 
 .logo {
@@ -1517,16 +1521,65 @@ template {
     max-width: 576px;
     width: 92%;
   }
+  body {
+    padding-top: 79px;
+  }
   .logo__image {
     margin-bottom: 2px;
+  }
+  .navbar-nav--mobile--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
   }
   .navbar-top {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-right: -1px;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  .navbar__search--mobile--hidden, .navbar__user--mobile--hidden {
     display: none;
+  }
+  .navbar__search--mobile--visible, .navbar__user--mobile--visible {
+    display: flex;
+  }
+  .navbar__user {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 7px;
+  }
+  .navbar__search {
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 19px;
+  }
+  .navbar-button {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 79px;
+    bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 69px;
+  }
+  .navbar-button--visible {
+    display: block;
+  }
+  .navbar-menu {
+    padding: 0;
+    flex-direction: column;
+  }
+  .navbar-menu__item {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item--mobile--visible {
+    display: block;
+  }
+  .search__input {
+    max-width: 243px;
   }
   .menu-button {
     width: 16px;
@@ -1542,6 +1595,11 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .user__name--light {
+    color: #ffffff;
+    margin-left: 0;
+    margin-top: 10px;
   }
   .breadcrumb-list {
     padding: 19px 0 18px 0;

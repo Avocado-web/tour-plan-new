@@ -182,16 +182,60 @@
   .newsletter-wrapper
     max-width: 576px
     width: 92%
+  body
+    padding-top: 79px
   .logo
     &__image
       margin-bottom: 2px
   .navbar
+    &-nav
+      &--mobile
+        &--fixed
+          position: fixed
+          top: 0
+          left: 0
+          right: 0
+          z-index: 99
     &-top
       padding-top: 30px
       padding-bottom: 30px
       margin-right: -1px
-    &__search, &-menu, &__user
+    &__search, &__user
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__user
+      flex-direction: column
+      justify-content: center
+      margin-bottom: 7px
+    &__search
+      justify-content: center
+      margin-right: 0
+      margin-bottom: 19px
+    &-button
       display: none
+      position: fixed
+      left: 0
+      right: 0
+      top: 79px
+      bottom: 0
+      padding-top: 30px
+      padding-bottom: 69px
+      &--visible
+        display: block
+    &-menu
+      padding: 0
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--mobile
+          &--visible
+            display: block
+  .search
+    &__input
+      max-width: 243px
   .menu
     &-button
       width: 16px
@@ -206,6 +250,12 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
   .breadcrumb
     &-list
       padding: 19px 0 18px 0
