@@ -577,30 +577,33 @@
         <div class="modal__overlay"></div>
         <!-- /.modal__overlay -->
         <div class="modal__dialog">
-            <a href="" class="modal__close">
-                <img src="img/modal/close.svg" alt="icon: close">
-            </a>
-            <h3 class="modal__title modal__title--form">booking</h3>
-            <form action="send.php" method="POST" class="modal__form form">
-                <div class="modal__input-group">
-                    <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" />
-                </div>
-                <!-- /.modal__input-group -->
-                <div class="modal__input-group">
-                    <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="phone" />
-                </div>
-                <!-- /.modal__input-group -->
-                <div class="modal__input-group">
-                    <input type="text" class="input modal__input" placeholder="Email*" name="email" />
-                </div>
-                <!-- /.modal__input-group -->
-                <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
-                <div class="modal__footer">
-                    <button class="button modal__button" type="submit">Send</button>
-                    <span class="modal__failds">* Required Fields</span>
-                </div>
-                <!-- /.modal__footer -->
-            </form>
+            <div class="modal__wrapper">
+                <a href="" class="modal__close">
+                    <img src="img/modal/close.svg" alt="icon: close">
+                </a>
+                <h3 class="modal__title modal__title--form">booking</h3>
+                <form action="send.php" method="POST" class="modal__form form">
+                    <div class="modal__input-group">
+                        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" />
+                    </div>
+                    <!-- /.modal__input-group -->
+                    <div class="modal__input-group">
+                        <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="phone" />
+                    </div>
+                    <!-- /.modal__input-group -->
+                    <div class="modal__input-group">
+                        <input type="text" class="input modal__input" placeholder="Email*" name="email" />
+                    </div>
+                    <!-- /.modal__input-group -->
+                    <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
+                    <div class="modal__footer">
+                        <button class="button modal__button" type="submit">Send</button>
+                        <span class="modal__failds">* Required Fields</span>
+                    </div>
+                    <!-- /.modal__footer -->
+                </form>
+            </div>
+            <!-- /.modal__wrapper -->
         </div>
         <!-- /.modal__dialog -->
     </div>

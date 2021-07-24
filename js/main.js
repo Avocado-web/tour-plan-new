@@ -29,29 +29,41 @@ $(document).ready(function() {
 
     var menuButton = document.querySelector(".menu-button");
     menuButton.addEventListener("click", function() {
-        console.log("Клик по кнопке");
         document
             .querySelector(".navbar-button")
             .classList.toggle("navbar-button--visible");
     });
 
-    var modalButton = $("[data-toggle = modal]");
-    var closeModalButton = $(".modal__close");
+    let modalButton = $("[data-toggle=modal]");
+    let closeModalButton = $(".modal__close");
+    let maskModal = $(".modal__overlay");
     modalButton.on("click", openModal);
-    closeModalButton.on("click", closeModal)
+    closeModalButton.on("click", closeModal);
+    maskModal.on("click", closeModal);
 
     function openModal() {
-        var modalOverlay = $(".modal__overlay");
-        var modalDialog = $(".modal__dialog");
+        const modalOverlay = $(".modal__overlay");
+        const modalDialog = $(".modal__dialog");
         modalOverlay.addClass("modal__overlay--visible");
         modalDialog.addClass("modal__dialog--visible");
     }
 
     function closeModal(event) {
-        event.preventDefault()
-        var modalOverlay = $(".modal__overlay");
-        var modalDialog = $(".modal__dialog");
+        event.preventDefault();
+        const modalOverlay = $(".modal__overlay");
+        const modalDialog = $(".modal__dialog");
         modalOverlay.removeClass("modal__overlay--visible");
         modalDialog.removeClass("modal__dialog--visible");
     }
+
+    $(document).keyup(function(event) {
+        if (event.key === "Escape" || event.keyCode === 27) {
+            event.preventDefault();
+            const modalOverlay = $(".modal__overlay");
+            const modalDialog = $(".modal__dialog");
+            modalOverlay.removeClass("modal__overlay--visible");
+            modalDialog.removeClass("modal__dialog--visible");
+        }
+    });
+
 });

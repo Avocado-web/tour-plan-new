@@ -435,6 +435,24 @@
       flex-basis: 100%
       display: flex
       justify-content: space-between
+  .modal
+    &__wrapper
+      height: calc(104vh - 142px)
+    &__dialog
+      min-width: 80%
+      padding: 33px 50px
+
+@media (max-width: 456px)
+  .modal
+    &__dialog
+      min-width: 92%
+      padding: 33px 45px
+    &__button
+      min-width: 100%
+      min-height: 39px
+      padding: 11px
+
+      
 @media (max-width: 320px)
   .container,
   .newsletter-wrapper

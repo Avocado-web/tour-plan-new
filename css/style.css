@@ -56,6 +56,7 @@ textarea {
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
+  border: none;
 }
 
 .message {
@@ -1302,6 +1303,7 @@ template {
 .info-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   width: 696px;
 }
@@ -1311,6 +1313,10 @@ template {
   align-items: center;
   padding: 0;
   margin: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 10px 0px;
 }
 
 .info__item {
@@ -1332,6 +1338,11 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
+}
+
+.modal__wrapper {
+  overflow-x: hidden;
+  height: calc(100vh - 142px);
 }
 
 .modal__overlay {
@@ -1962,6 +1973,25 @@ template {
     flex-basis: 100%;
     display: flex;
     justify-content: space-between;
+  }
+  .modal__wrapper {
+    height: calc(104vh - 142px);
+  }
+  .modal__dialog {
+    min-width: 80%;
+    padding: 33px 50px;
+  }
+}
+
+@media (max-width: 456px) {
+  .modal__dialog {
+    min-width: 92%;
+    padding: 33px 45px;
+  }
+  .modal__button {
+    min-width: 100%;
+    min-height: 39px;
+    padding: 11px;
   }
 }
 
