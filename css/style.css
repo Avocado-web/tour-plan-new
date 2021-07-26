@@ -949,6 +949,7 @@ template {
   line-height: 18px;
   border: none;
   color: #BDBDBD;
+  background-color: #fff;
 }
 
 .subscribe__button {
