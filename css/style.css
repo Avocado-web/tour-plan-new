@@ -92,7 +92,7 @@ textarea {
   border-radius: 8px;
   background-color: #00000054;
   width: 100%;
-  height: 30px;
+  text-align: center;
   /* полоса прокрутки (скроллбар) */
 }
 
@@ -1292,6 +1292,7 @@ template {
 
 .footer__input {
   width: 100%;
+  background-color: #fff;
 }
 
 .footer__input-group {
@@ -1302,7 +1303,8 @@ template {
 .footer__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
+  background-color: #fff;
 }
 
 .footer__failds {
