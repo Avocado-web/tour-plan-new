@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
     const hotelSlider = new Swiper('.hotel-slider', {
         // Optional parameters
         loop: true,
@@ -65,5 +65,33 @@ $(document).ready(function() {
             modalDialog.removeClass("modal__dialog--visible");
         }
     });
+
+    $(".form").each(function() {
+        $(this).validate({
+            debug: true,
+            errorClass: "invalid",
+            rules: {
+                phone: {
+                    minlength: 18,
+                },
+            },
+            messages: {
+                name: {
+                    required: "Please enter your name",
+                },
+                email: {
+                    required: "We need your email address to contact you",
+                    email: "Your email address must be in the format name@domain.com",
+                },
+                phone: {
+                    required: "Please, fill the number field",
+                    minlength: "Please, fill full phone number",
+                },
+            },
+        });
+    });
+
+    $(".phone").mask("+7 (999) 999-99-99");
+
 
 });

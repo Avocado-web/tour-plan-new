@@ -40,6 +40,7 @@ textarea
   line-height: 15px
   color: $placeholder
   border: none
+  outline: none
 .message
   padding: 18px 23px
   font-size: 12px
@@ -48,6 +49,7 @@ textarea
   border-radius: 4px
   border: none
   padding: 18px 23px
+  outline: none
 .button
   min-width: 160px
   min-height: 50px
@@ -58,3 +60,30 @@ textarea
   border-radius: 4px
   background-color: $primary
   color: $light
+.invalid
+  color: $primary
+  font-size: 12px
+  font-weight: 600
+  padding: 10px
+  border-radius: 8px
+  background-color: #00000054
+  width: 100%
+  height: 30px
+
+  /* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar 
+    width: 6px
+    height: 4px
+    background-color: inherit
+    margin-left: 5px
+
+    /* ползунок скроллбара */
+::-webkit-scrollbar-thumb 
+    background-color: $primary
+    border-radius: 9em
+
+::-webkit-scrollbar-thumb:hover 
+    background-color: rgba(230, 54, 54, 0.289)
+html, body 
+  scrollbar-color: inherit $primary
+  scrollbar-width: 6px | thin | none 
