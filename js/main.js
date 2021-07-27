@@ -68,7 +68,6 @@ $(document).ready(() => {
 
     $(".form").each(function() {
         $(this).validate({
-            debug: true,
             errorClass: "invalid",
             rules: {
                 phone: {
@@ -92,6 +91,13 @@ $(document).ready(() => {
     });
 
     $(".phone").mask("+7 (999) 999-99-99");
+
+
+    $("[data-toggle=modal]").mouseenter(function(){
+        $("body").css("overflow", "hidden"); 
+    }).mouseleave(function(){
+        $("body").css("overflow", "visible");
+    });
 
 
 });

@@ -34,12 +34,27 @@
       font-size: 36px
       line-height: 45px
       text-transform: uppercase
+  &__subscribe
+    label#email-error
+      position: absolute
+      top: -67%
+      left: 7px
+      z-index: 11
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $primary
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+
 .subscribe
   position: relative
   width: 350px
   height: 55px
   border-radius: 4px
-  overflow: hidden
   &__input
     position: absolute
     width: 100%
@@ -71,4 +86,5 @@
     font-weight: bold
     font-size: 12px
     line-height: 15px
+    border-radius: 0 4px 4px 0
   

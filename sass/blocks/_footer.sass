@@ -97,6 +97,36 @@
     line-height: 15px
     margin-top: 20px
     color: #E0E0E0
+  &__form
+    position: relative
+    label#name-error
+      position: absolute
+      top: -37px
+      z-index: 11
+      left: 2%
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $primary
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+    label#phone-error
+      position: absolute
+      top: -37px
+      left: 55%
+      z-index: 11
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $primary
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
 
 .contact-details
   max-width: 500px

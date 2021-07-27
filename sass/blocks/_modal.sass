@@ -51,6 +51,8 @@
     width: 100%
     margin-top: 15px
     background-color: #fff
+  &__input-group
+    position: relative
   &__message
     width: 100%
     min-height: 123px
@@ -71,3 +73,48 @@
     align-items: flex-start
   &__button
     margin-top: 15px
+  &__form
+    label#name-error
+      position: absolute
+      top: -21px
+      z-index: 11
+      left: 6%
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $primary
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+    label#phone-error
+      position: absolute
+      top: -21px
+      z-index: 11
+      left: 6%
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $primary
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+    label#email-error
+      position: absolute
+      top: -21px
+      left: 6%
+      width: 92%
+      z-index: 11
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $primary
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+

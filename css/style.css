@@ -85,14 +85,12 @@ textarea {
 }
 
 .invalid {
-  color: #ec1f46;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
   padding: 10px;
   border-radius: 8px;
-  background-color: #00000054;
-  width: 100%;
-  text-align: center;
+  background-color: #ec1f46;
   /* полоса прокрутки (скроллбар) */
 }
 
@@ -929,12 +927,29 @@ template {
   text-transform: uppercase;
 }
 
+.newsletter__subscribe label#email-error {
+  position: absolute;
+  top: -67%;
+  left: 7px;
+  z-index: 11;
+}
+
+.newsletter__subscribe label#email-error::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: -5px;
+  background-color: #ec1f46;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
 .subscribe {
   position: relative;
   width: 350px;
   height: 55px;
   border-radius: 4px;
-  overflow: hidden;
 }
 
 .subscribe__input {
@@ -970,6 +985,7 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  border-radius: 0 4px 4px 0;
 }
 
 .reviews {
@@ -1316,6 +1332,46 @@ template {
   color: #E0E0E0;
 }
 
+.footer__form {
+  position: relative;
+}
+
+.footer__form label#name-error {
+  position: absolute;
+  top: -37px;
+  z-index: 11;
+  left: 2%;
+}
+
+.footer__form label#name-error::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: -5px;
+  background-color: #ec1f46;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.footer__form label#phone-error {
+  position: absolute;
+  top: -37px;
+  left: 55%;
+  z-index: 11;
+}
+
+.footer__form label#phone-error::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: -5px;
+  background-color: #ec1f46;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
 .contact-details {
   max-width: 500px;
 }
@@ -1449,6 +1505,10 @@ template {
   background-color: #fff;
 }
 
+.modal__input-group {
+  position: relative;
+}
+
 .modal__message {
   width: 100%;
   min-height: 123px;
@@ -1475,6 +1535,61 @@ template {
 
 .modal__button {
   margin-top: 15px;
+}
+
+.modal__form label#name-error {
+  position: absolute;
+  top: -21px;
+  z-index: 11;
+  left: 6%;
+}
+
+.modal__form label#name-error::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: -5px;
+  background-color: #ec1f46;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.modal__form label#phone-error {
+  position: absolute;
+  top: -21px;
+  z-index: 11;
+  left: 6%;
+}
+
+.modal__form label#phone-error::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: -5px;
+  background-color: #ec1f46;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.modal__form label#email-error {
+  position: absolute;
+  top: -21px;
+  left: 6%;
+  width: 92%;
+  z-index: 11;
+}
+
+.modal__form label#email-error::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: -5px;
+  background-color: #ec1f46;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
 }
 
 @media (max-width: 1920px) {
@@ -1990,6 +2105,22 @@ template {
   }
   .footer__form {
     flex-direction: column;
+  }
+  .footer__form label#phone-error {
+    position: absolute;
+    top: 29px;
+    left: 2%;
+    z-index: 11;
+  }
+  .footer__form label#phone-error::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    bottom: -5px;
+    background-color: #ec1f46;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
   }
   .footer__message {
     margin-bottom: 15px;

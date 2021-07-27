@@ -414,6 +414,20 @@
         margin-bottom: 18px
     &__form
       flex-direction: column
+      label#phone-error
+        position: absolute
+        top: 29px
+        left: 2%
+        z-index: 11
+        &::after
+          content: ''
+          position: absolute
+          left: 15px
+          bottom: -5px
+          background-color: $primary
+          width: 10px
+          height: 10px
+          transform: rotate(45deg)
     &__message
       margin-bottom: 15px
     &__info
